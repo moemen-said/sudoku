@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
+
+body * {
+    font-family: "Boogaloo", cursive;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+}
+img {
+    width: 150px;
+}
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+}
+form {
+    position: relative;
+    max-width: 500px !important;
+    margin: auto;
+}
+.alertText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    color: #db1e1e;
+    border-radius: 5px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.form-floating {
+    margin: auto;
+}
+.form-floating > .form-control,
+.form-floating > .form-select {
+    height: unset !important;
+    line-height: unset !important;
+}
+input,
+select {
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    font-size: 2rem !important;
+    border: 2px solid transparent !important;
+}
+option {
+    color: #555;
+    background-color: #fff;
+}
+label {
+    font-size: 2rem !important;
+    color: #fff;
+}
+input:focus,
+select:focus {
+    box-shadow: none !important;
+    border: 2px solid #841a80 !important;
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    transform: scale(0.85) translateY(-1.2rem) translateX(0.15rem) !important;
+}
+button {
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid transparent;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 20px auto;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    background-color: #fff;
+    color: #841a80;
+}
+
+@media (max-width: 576px) {
+    img {
+        width: 100px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    form {
+        width: 90% !important;
+    }
+    input,
+    select,
+    label {
+        font-size: 1rem !important;
+    }
+    .form-floating > .form-control,
+    .form-floating > .form-select {
+        height: calc(3.5rem + 2px) !important;
+        line-height: 1.25 !important;
+    }
+    .form-floating > .form-control:focus ~ label,
+    .form-floating > .form-control:not(:placeholder-shown) ~ label,
+    .form-floating > .form-select ~ label {
+        transform: scale(0.85) translateY(-0.7rem) translateX(0.15rem) !important;
+    }
+}

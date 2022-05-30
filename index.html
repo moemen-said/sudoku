@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon.png">
+    <title>SUDOKU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/indexStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img class="d-block m-auto" src="./images/icon.png">
+            </div>
+            <div class="col-12">
+                <h1>Welcome To My SUDOKU</h1>
+            </div>
+            <form id="startForm" class="needs-validation gx-0 animate__animated" novalidate method="get" action="./pages/charactersSelection.html">
+                <div class="col-12">
+                    <div class="form-floating mb-3">
+                        <input name="username" type="text" class="form-control" id="floatingInput" autocomplete="off" placeholder="Enter Your Name" required>
+                        <label for="floatingInput">Enter Your Name</label>
+                        <div class="alertText animate__animated animate__fadeIn d-none animate__faster"></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <select name="level" class="form-select" id="floatingSelect">
+                            <option value="1" selected>Level 1</option>
+                            <option value="2">Level 2</option>
+                        </select>
+                        <label for="floatingSelect">Choose your level</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" id="startBtn">START</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/functions.js"></script>
+    <script>
+        let form = document.getElementById('startForm');
+        let startBtn = document.getElementById('startBtn');
+
+        startBtn.addEventListener('click', function (event) {
+            event.preventDefault()
+            if (form.checkValidity()) {
+                sessionStorage.setItem('username', form.username.value)
+                sessionStorage.setItem('selectedLevel', form.level.value)
+                document.body.style.overflow = 'hidden'
+                document.body.style.marginTop = '250%'
+                setTimeout(function () {
+                    form.submit()
+                }, 1000)
+            }
+            else {
+                shakeAlert(form, 'Please Enter Your Name')
+            }
+        })
+
+    </script>
+</body>
+
+</html>

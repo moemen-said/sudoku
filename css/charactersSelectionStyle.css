@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
+
+body * {
+    font-family: "Boogaloo", cursive;
+    transition: all 0.2s ease-in-out;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/bg.jpg),#000 no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    margin-top: 250%;
+}
+body.loaded {
+    margin-top: 0%;
+}
+.content{
+    opacity: 0;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 40px auto;
+    text-align: center;
+}
+h1 span{
+    color:#dd3ad6
+}
+h3 {
+    color: #fff;
+    margin: 20px;
+}
+.alertText {
+    padding: 20px;
+    background-color: #fff;
+    color: #db1e1e;
+    border-radius: 5px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: max-content;
+    top: 50%;
+    width: max-content;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    border: 2px solid #db1e1e;
+    box-shadow: 0px 0px 5px #000;
+}
+.selectedCharsDivContainer{
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 20px;
+}
+.selectedCharsDiv,
+.availableCharsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.availableCharsDiv {
+    border-bottom: none;
+}
+#startBtn{
+    padding: 10px 30px;
+    display: block;
+    margin: 10px auto;
+    background-color: #26c72e;
+    color:#fff;
+    border: 2px solid #0f5e13;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #333 inset;
+}
+#startBtn:hover{
+    box-shadow: 0px 0px 3px #333 inset;
+}
+#startBtn:active{
+    box-shadow: 0px 0px 3px #333 inset;
+    transform: scale(.95);
+}
+#startBtn.disabled{
+    cursor: not-allowed;
+    background: #aaa;
+    border-color: transparent;
+    box-shadow: none;
+}
+#startBtn.disabled:active{
+    transform:unset;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    background-color: #eee;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+    margin: 10px;
+}
+.selectedCharsDiv .item{
+    cursor: default;
+}
+.availableCharsDiv .item {
+    margin: 20px;
+}
+.availableCharsDiv .item.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+.availableCharsDiv .item:hover {
+    box-shadow: 0px 7px 7px -3px #333;
+    transform: translateY(-5px);
+}
+.item img {
+    width: 100%;
+    object-fit: cover;
+}
+.item button {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px 0 0 0;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid #555;
+    border-right: none;
+    border-bottom: none;
+}
+.item.empty {
+    border: 2px solid #ccc;
+}
+.item.empty button {
+    display: none;
+}
+.item button i {
+    font-size: 18px;
+    color: #db1e1e;
+}
+.item button:hover {
+    background-color: #db1e1e;
+}
+.item button:hover i {
+    color: #fff;
+}

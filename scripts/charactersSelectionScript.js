@@ -9,7 +9,6 @@ window.addEventListener('load', function () {
     //for animation on load
     let contentDiv = document.querySelector('.content');
     document.body.style.marginTop = '0%'
-
     setTimeout(() => {
         document.body.style.overflow = 'auto';
         contentDiv.style.opacity = '1';
@@ -39,7 +38,7 @@ window.addEventListener('load', function () {
         if (!this.classList.contains('disabled')) {
             sessionStorage.setItem('SelectedImgsArr', JSON.stringify(preferedArray))
             contentDiv.style.opacity = '0';
-            setTimeout(() => location.assign('/pages/game.html'), 1000)
+            setTimeout(() => location.assign('./game.html'), 1000)
 
         }
     })

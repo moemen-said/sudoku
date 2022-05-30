@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
 
     if (this.sessionStorage.getItem('username') == undefined || this.sessionStorage.getItem('selectedLevel') == undefined)
-        this.location.assign('/')
+        this.location.assign('./')
     else
         this.sessionStorage.setItem('SelectedImgsArr', null)
 

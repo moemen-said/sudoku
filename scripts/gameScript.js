@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
         this.sessionStorage.getItem('SelectedImgsArr') == undefined ||
         this.sessionStorage.getItem('SelectedImgsArr') == null
     )
-        this.location.assign('/');
+        this.location.assign('./');
 
     // display username and timer on page load
     let usernameSpan = this.document.getElementById('username')
@@ -36,13 +36,13 @@ window.addEventListener('load', function () {
     let retryBtn = document.getElementById('retryBtn')
     retryBtn.addEventListener('click', () => {
         this.sessionStorage.removeItem('sudokuSolution')
-        this.location.assign('/')
+        this.location.assign('./')
     })
 
     let playAgainBtn = document.getElementById('playAgainBtn')
     playAgainBtn.addEventListener('click', () => {
         this.sessionStorage.removeItem('sudokuSolution')
-        this.location.assign('/')
+        this.location.assign('./')
     })
 
 

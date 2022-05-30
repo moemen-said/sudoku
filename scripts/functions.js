@@ -241,7 +241,7 @@ function startGame() {
         let timerSpan = document.getElementById('timer')
         timerSpan.innerText = minutes + 'm : ' + seconds + 's'
 
-        if (!minutes && !seconds) gameOverAlert(timerID)
+        if (!minutes && !seconds) gameOverAlert(timerId)
 
     }, 1000);
 }
